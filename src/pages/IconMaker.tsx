@@ -5,6 +5,7 @@ import ControlsPanel from '../components/ControlsPanel';
 import { SystemPreset } from '../types';
 import { loadSystemPresets } from '../services/presetService';
 import { useCartridgeRenderer } from '../hooks/use-cartridge-renderer';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const IconMaker: React.FC = () => {
   const [presets, setPresets] = useState<SystemPreset[]>([]);
@@ -54,6 +55,7 @@ const IconMaker: React.FC = () => {
 
   return (
     <>
+      <SpeedInsights />
       <DotGridBackground />
       <div className="min-h-screen p-4 sm:p-6 lg:p-8 relative">
         <div className="max-w-7xl mx-auto h-full">
